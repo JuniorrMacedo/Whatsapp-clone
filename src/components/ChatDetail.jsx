@@ -36,8 +36,10 @@ function ChatDetail() {
       </div>
 
       {/* Seção de mensagens */}
-      <div className="h-100">
-
+      <div className="bg-[#0a131a] bg-[url('assets/images/bg.webp')] bg-contain overflow-y-scroll h-100"
+      style={{ padding: "12px 7%" }}
+      >
+        
       </div>
 
       {/* seção inferior */}

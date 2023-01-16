@@ -1,13 +1,16 @@
 import React, {useState, useEffect} from "react";
 import Chat from "./Chat";
 import { BiArchiveIn } from "react-icons/bi";
-import { chatsData } from "../data/whatsapp";
+import { LoadContacts } from "../Controllers/LoadContacts.controller";
+
+const contacts = new LoadContacts();
+
 
 function Chats({ filter }) {
-  const [chats, setChats] = useState(chatsData);
+  const [chats, setChats] = useState(contacts);
 
   useEffect(() => {
-    const newChats = filter ? chatsData.filter((chat) => chat.unreadMsgs) : chatsData;
+    const newChats = filter ? contacts.filter((chat) => chat.unreadMsgs) : contacts;
     setChats(newChats);
   }, [filter]);
 
